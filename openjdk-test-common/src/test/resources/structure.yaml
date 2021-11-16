@@ -63,9 +63,9 @@ commandTests:
   setup: [[ 'chmod', '+x', '/workspace/test-blacklisted-pkgs.bash' ]]
   command: [ '/workspace/test-blacklisted-pkgs.bash' ]
   excludedOutput: ['NOT OK.* is installed']
-- name: 'Debian 9'
+- name: 'Debian 10'
   command: [ 'cat', '/etc/debian_version' ]
-  expectedOutput: ['9.*']
+  expectedOutput: ['10.*']
 
 
 fileExistenceTests:

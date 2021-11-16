@@ -20,11 +20,16 @@ ENV OPENJDK_VERSION ${openjdk.version}
 ENV GAE_IMAGE_NAME ${project.artifactId}
 ENV GAE_IMAGE_LABEL ${docker.tag.long}
 
+RUN apt-get update
+RUN apt-get -y -q --no-install-recommends install software-properties-common
+
+RUN apt-add-repository -y 'deb http://security.debian.org/debian-security stretch/updates main'
+
 RUN \
  apt-get -q update \
  && apt-get -y -q --no-install-recommends install \
     # install the jdk and its dependencies
-    ca-certificates-java \
+    # ca-certificates-java \
     openjdk-${openjdk.version.major}-jdk-headless=${openjdk.version}'*' \
     # procps is used in the jvm shutdown hook
     procps \
