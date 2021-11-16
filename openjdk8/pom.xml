@@ -32,7 +32,7 @@
     <openjdk.version.major>8</openjdk.version.major>
     <openjdk.version.minor></openjdk.version.minor> <!-- leave empty for latest JDK update -->
     <openjdk.version>${openjdk.version.major}${openjdk.version.minor}</openjdk.version>
-    <docker.appengine.image>gcr.io/google-appengine/debian9</docker.appengine.image>
+    <docker.appengine.image>gcr.io/gcp-runtimes/ubuntu_18_0_4:latest</docker.appengine.image>
     <docker.image.name>${docker.image.baseName}:${docker.tag.long}</docker.image.name>
   </properties>
 
